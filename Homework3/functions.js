@@ -42,6 +42,21 @@ function ReverseArrayAsString(arr) {
     return arr.reverse().join('');
 }
 
+/*
+Example how to do the without array functions
+function Reverse(num) {
+    let n = num;
+    let rev = 0;
+    let rem = 0;
+    while (n > 0) {
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = Math.floor(n / 10);
+    }
+    return rev;
+}*/
+
+
 function CheckPalindrome(input) {
     let initInput = input;
     let reversedInput = ReverseArrayAsString(SplitToArray(initInput));
@@ -53,6 +68,16 @@ function BinarySum(firstNum, secondNum, isSigned = false) {
     let str_firstNum = firstNum.toString();
     let str_secondNum = secondNum.toString();
     let arr_firstNum = str_firstNum.split("");
+
+    // can be done with for
+/*
+    arr_firstNum = [];
+    for(let i = 0; i < str_firstNum.length; i++)
+    {
+        arr_firstNum.push(str_firstNum.charAt(i))
+    }*/
+
+
     let arr_secondNum = str_secondNum.split("");
 
     while (arr_firstNum.length < arr_secondNum.length) {
@@ -122,17 +147,5 @@ function BinaryTwosComplement(num, bits = num.length + 1)
     return BinarySum(BinaryInverse(input), 1, true);
 }
 
-/*    Example how to do the without array functions
-function Reverse(num) {
-    let n = num;
-    let rev = 0;
-    let rem = 0;
-    while (n > 0) {
-        rem = n % 10;
-        rev = rev * 10 + rem;
-        n = Math.floor(n / 10);
-    }
-    return rev;
-}*/
 
 
