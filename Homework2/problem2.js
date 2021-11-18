@@ -4,7 +4,16 @@ let a = GetValidInput("Input a: ");
 let b = GetValidInput("Input b: ");
 let c = GetValidInput("Input c: ");
 
+
+if(parseInt(a) === 0)
+{
+    console.log("X: " + -c/b);
+    return;
+}
+
+
 let disc = b**2 - (4 * a * c);
+
 if(disc > 0)
 {
     let x1 = (-b - Math.sqrt(disc))/ (2 * a);
